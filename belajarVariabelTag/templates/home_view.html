@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Belajar Django | {{judul}}
+        </title>
+    </head>
+    <body>
+        <h1>Welcome to {{ judul }}</h1>
+        <p>{{ isi }}</p>
+        <ul>
+            {# Template Tag #}
+            {% for link,name in nav%}
+                <li>
+                    <a href="{{ link }}">
+                        {{ name }}
+                    </a>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </body>
+    <footer>Created by {{ author }}</footer>
+</html>
