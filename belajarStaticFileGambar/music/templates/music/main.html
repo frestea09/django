@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Belajar Django | {{ judul }}
+        </title>
+    </head>
+    <body>
+        <img  src="{% static "img/Music.png"%}">
+        <h1>{{ title }}</h1>
+        <p>{{ isi }}</p>
+        <p>Menu: </p>
+        <ul>
+            {% for link,name in nav %}
+                <li>
+                    <a href="{{ link }}">
+                        {{ name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </body>
+    <footer>
+        {{ author }}
+    </footer>
+</html>

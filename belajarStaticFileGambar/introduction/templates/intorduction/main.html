@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Belajar Django | {{ judul }}
+        </title>
+    </head>
+    <body>
+        <img width="100%" src="{% static "img/intorduction.png" %}">
+        <h1>{{ judul }}</h1>
+        <p>{{ isi }}</p>
+        <p>menu: </p>
+        {# Template Tag #}
+        {% for link,name in nav  %}
+            <li>
+                <a href="{{ link }}">
+                    {{ name }}
+                </a>
+            </li>
+        {% endfor %}
+    </body>
+    <footer>
+        Created by {{ author }}
+    </footer>
+</html>
