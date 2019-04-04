@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Learn Django | {{ title }}
+        </title>
+    </head>
+    <body>
+        <img width="100%" src="{% static banner %}">
+        <h1>Welcome to {{ title }}</h1>
+        <p>{{ content }}</p>
+        <p>Menu: </p>
+        <ul>
+            {% for link,name in nav %}
+                <li>
+                    <a href="{{ link }}">
+                        {{ name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input type="text" name="insertName" size="30" maxlength="50" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kelas:</td>
+                    <td>
+                        <input type="text" name="insertKelas" size="5" maxlength="10"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Ok"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    <footer>{{ author }}</footer>
+</html>
