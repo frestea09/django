@@ -1,0 +1,22 @@
+body{
+    background-color: #333333;
+    font-family: Arial;
+    color: #ffffff;
+}
+#logoImg{
+    height: 40px;
+}
+
+.container-fluid{
+    width: 800px;
+    background-color: #333333;
+    text-align: center;
+}
+.card-footer {
+    background-color: #333333;
+    text-align: left;
+
+}
+.jumbotron{
+    background-color: #333333;
+}

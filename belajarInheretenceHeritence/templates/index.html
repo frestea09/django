@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block navbar %}
+     <ul class="list-group">
+        <h5>Tools</h5>
+            {% for arah,nama in tool %}
+                <li class="list-group-item">
+                    <a href="{{ arah }}">
+                        {{ nama }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+{% endblock navbar %}
+{% block main %}
+    <h3>{{ headingArticle }}</h3>
+    <h5>{{ date }} By {{ author }}</h5>
+    <p>
+        {{ article }}
+    </p>
+{% endblock main %}

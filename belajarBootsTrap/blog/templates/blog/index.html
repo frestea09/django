@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <title>
+            Belajar Django | {{ title }}
+        </title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <img id="banner" src="{% static banner %}"/>
+            </div>
+            <div id="content">
+                <div id="nav">
+                    <ul>
+                        {% for link,name in nav %}
+                            <li>
+                                <a href="{{ link }}">
+                                    {{ name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div id="main">
+                    <h2>{{ header }}</h2>
+                    <h3>{{ date }} by {{ author }}</h3>
+                    <p>{{ article }}</p>
+                </div>
+            </div>
+            <div id="footer">
+                Copyright &copy; 2019 ilman teguh prasetya
+            </div>
+        </div>
+    </body>
+</html>

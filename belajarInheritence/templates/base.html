@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+           {{ title }}
+        </title>
+        {% include "snippets/styles.html" %}
+    </head>
+    <body>
+        <div class="container-fluid">
+            {% include "snippets/navbar.html" %}
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                   {% block content %}
+                   {% endblock content %}
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+                &copy; 2019 ilman
+            </div>
+        </div>
+        {% include "snippets/js.html" %}
+       </body>
+</html>

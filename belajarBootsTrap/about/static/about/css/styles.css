@@ -1,0 +1,46 @@
+#nav a:hover{
+    background-color: khaki;
+}
+#banner {
+    width: 100%;
+}
+#nav{
+    width: 180px;
+    float: right;
+}
+#main{
+    width: 600px;
+    float: left;
+    padding: 10px;
+
+}
+body{
+    background-color: grey;
+}
+#container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+#nav ul{
+    padding: 10px 10px;
+    background-color: grey;
+    margin: 0px;
+    overflow: hidden;
+}
+#nav li{
+    list-style-type:None ;
+    float: none;
+}
+#nav a{
+    font-family: Arial;
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+}
+#footer{
+    clear: both;
+    text-align: center;
+    padding: 10px;
+}

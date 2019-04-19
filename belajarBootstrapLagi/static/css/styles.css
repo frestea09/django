@@ -1,0 +1,36 @@
+body{
+    background-color: #1b1e21;
+}
+#container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+#content{
+    padding: 10px;
+}
+#navigation{
+    float: left;
+    width: 180px;
+}
+#main{
+    float: right;
+    width: 600px;
+}
+#footer{
+    clear: both;
+    color: gray;
+    text-align: center;
+}
+#iconLogo{
+    height: 50px;
+}
+.jumbotron{
+    background-image:url("/static/img/banner.png") ;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    text-align: center;
+    color: white;
+}

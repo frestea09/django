@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Belajar Django | {{ page }}
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="static/css/styles.css" >
+        <link rel="icon" href="static/img/favicon.png">
+    </head>
+    <body>
+{#    navbar#}
+        <nav class="fixed-top navbar navbar-expand-md navbar-dark " id="mynav">
+          <a class="navbar-brand" href="#">
+              <img id="iconLogo" src="{% static logo %}">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {% for link,name in nav  %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ link }}">
+                        {{ name }}
+                    </a>
+                  </li>
+                {% endfor %}
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+{#jombroton#}
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Selamat Datang</h1>
+            <p class="lead">This is Website who implementation django 2.* .</p>
+          </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container bg-white text-dark shadow" style="margin-top: -100px" id="mybody">
+                <div class="row" style="height: 800px">
+                    content 1
+                </div>
+            </div>
+            <div class="container bg-dark text-white shadow">
+                <div class="row" style="height: 300px">
+                    content 2
+                </div>
+            </div>
+            <div class="container bg-dark text-white shadow">
+                <div class="row" style="height: 300px">
+                    content 2
+                </div>
+            </div>
+            <div class="container bg-dark text-white shadow">
+                <div class="row" style="height: 300px">
+                    content 2
+                </div>
+            </div>
+            <div class="container bg-dark text-white shadow">
+                <div class="row" style="height: 300px">
+                    content 2
+                </div>
+            </div>
+        </div>
+{#       <div id="container">#}
+{#            <div id="header">#}
+{##}
+{#            </div>#}
+{#           <div id="content">#}
+{#               <div id="navigation">#}
+{#                   <h3>Tools</h3>#}
+{#                    <ul class="list-group">#}
+{#                        {% for link,name in tool %}#}
+{#                            <li class="list-group-item">#}
+{#                                {{ name }}#}
+{#                            </li>#}
+{#                        {% endfor %}#}
+{#                    </ul>#}
+{#               </div>#}
+{#               <div id="main">#}
+{#                   <h4>{{ heading }}</h4>#}
+{#                   <h5>By {{ author }}</h5>#}
+{#                   <h6>Update {{ date }}</h6>#}
+{#                  <p>{{ article }}</p>#}
+{#               </div>#}
+{#           </div>#}
+{#           <div id="footer">#}
+{#                Copyright &copy; 2019 ilman teguh prasetya#}
+{#           </div>#}
+{#       </div>#}
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="static/js/scrolling.js" type="text/javascript" charset="UTF-8"></script>
+    </body>
+</html>

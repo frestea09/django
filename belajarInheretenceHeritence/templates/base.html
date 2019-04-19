@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Django | {{ title }}</title>
+        {% include "snippets/styles.html" %}
+    </head>
+    <body>
+        {% include "snippets/navbar.html" %}
+        <div class="container-fluid">
+            <div class="container bg-dark text-white shadow" id="myBody">
+                <div class="row">
+                    <div class="toolbar">
+                        {% block navbar %}
+
+                        {% endblock navbar %}
+                    </div>
+                    <div class="main">
+                        {% block main %}
+
+                        {% endblock main %}
+                    </div>
+                </div>
+            </div>
+            <div class="container bg-primary text-white shadow">
+                <div class="row">
+                    <div class="toolbar">
+                            <ul class="list-group">
+                            <h5>Tools</h5>
+                                {% for arah,nama in tool %}
+                                    <li class="list-group-item">
+                                        <a href="{{ arah }}">
+                                            {{ nama }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                    </div>
+                    <div class="main">
+                        <h3>{{ headingArticle }}</h3>
+                        <h5>{{ date }} By {{ author }}</h5>
+                        <p>
+                            {{ article }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {#            footer#}
+        <div class="footer">
+            &copy; 2019 ilman
+        </div>
+        {% include "snippets/scripts.html"%}
+    </body>
+
+</html>
